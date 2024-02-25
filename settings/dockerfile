@@ -9,7 +9,9 @@ RUN a2enmod rewrite \
     && a2enmod headers
 
 # Instalar extensões PHP
-RUN docker-php-ext-install pdo_mysql zip
+RUN docker-php-ext-install pdo_mysql zip mysqli
 
 # Limpar cache
 RUN apt-get clean && rm -rf /var/lib/apt/lists/*
+
+RUN chmod -R -f 777 /var/www
