@@ -19,6 +19,8 @@ services:
       moodle:
         ipv4_address: 172.100.0.2
 
+  #docker exec -i -t moodle sh
+  # chmod -R -f 777 moodle-data
   moodle:
     image: "moodle"
     container_name: "moodle"
